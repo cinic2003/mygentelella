@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  get 'plainpage/index'
+  
+  resources :plainpage do
+    collection do
+      get 'dashboard2'
+      get 'dashboard3'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
